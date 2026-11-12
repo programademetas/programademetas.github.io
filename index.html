@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Degustação Programa de Metas SEEDF</title>
+<meta name="description" content="Receba grátis uma meta completa do Programa de Metas do Prof. Rodrigo Francelino: 300 questões comentadas de LODF e Gestão Escolar para o concurso da SEEDF.">
+<meta property="og:title" content="300 questões comentadas grátis para a SEEDF">
+<meta property="og:description" content="Uma meta completa do Programa de Metas do Prof. Rodrigo Francelino. LODF e Gestão Escolar, conteúdo comum a todos os cargos.">
+<meta property="og:image" content="professor-francelino.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: faixa roxa de abertura com formulário fixo à direita, seções claras em coluna única de 1080px, fechamento roxo */
+:root {
+  --roxo: #22095C;
+  --roxo-2: #4B1FB0;
+  --lilas: #F1ECFB;
+  --lilas-2: #D9CFF5;
+  --amarelo: #FFC400;
+  --amarelo-2: #FFD84D;
+  --tinta: #1E1438;
+  --cinza: #5D5478;
+  --branco: #FFFFFF;
+  --certo: #1E7B45;
+  --errado: #B42318;
+  --font: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --raio: 18px;
+  --max: 1080px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; font-family: var(--font); color: var(--tinta); background: var(--branco); font-size: 16px; line-height: 1.6; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { line-height: 1.12; text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+a { color: inherit; }
+.wrap { max-width: var(--max); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--roxo-2); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 14px 28px; border-radius: 999px; border: 0; font: 700 16px/1.2 var(--font); text-decoration: none; cursor: pointer; transition: transform .15s ease, background .15s ease; }
+.btn:focus-visible, input:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+.btn-amarelo { background: var(--amarelo); color: var(--roxo); }
+.btn-amarelo:hover { background: var(--amarelo-2); transform: translateY(-1px); }
+.btn-roxo { background: var(--roxo); color: var(--branco); }
+.btn-roxo:hover { background: var(--roxo-2); }
+.btn-verde { background: #1FA855; color: var(--branco); }
+.btn-verde:hover { background: #178C46; }
+
+/* topo */
+.topo { background: var(--roxo); color: var(--branco); }
+.topo .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 18px; flex-wrap: wrap; }
+.marca { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 15px; }
+.marca-selo { width: 34px; height: 34px; border-radius: 10px; background: var(--amarelo); display: grid; place-items: center; }
+.topo-link { font-size: 14px; font-weight: 600; color: var(--amarelo); text-decoration: none; }
+
+/* hero */
+.hero { background: var(--roxo); color: var(--branco); padding-bottom: 72px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; right: -120px; top: -140px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(75,31,176,.55), rgba(75,31,176,0) 70%); pointer-events: none; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; align-items: start; padding-block: 40px 0; position: relative; z-index: 1; }
+.selo { display: inline-flex; background: var(--amarelo); color: var(--roxo); font-weight: 800; font-size: 13px; letter-spacing: .12em; padding: 8px 16px; border-radius: 999px; text-transform: uppercase; }
+.hero h1 { font-size: clamp(38px, 6vw, 64px); font-weight: 800; margin-top: 22px; }
+.hero h1 em { font-style: normal; color: var(--amarelo); }
+.hero .sub { margin-top: 20px; font-size: 18px; color: var(--lilas-2); max-width: 34em; }
+.lista-hero { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+.lista-hero li { display: flex; gap: 14px; align-items: flex-start; font-weight: 500; }
+.check { flex: none; width: 26px; height: 26px; border-radius: 8px; background: var(--amarelo); display: grid; place-items: center; margin-top: 1px; }
+.check svg { width: 15px; height: 15px; }
+.prova-num { display: flex; gap: 28px; margin-top: 34px; flex-wrap: wrap; }
+.prova-num div { display: grid; }
+.prova-num strong { font-size: 34px; font-weight: 800; color: var(--amarelo); line-height: 1; }
+.prova-num span { font-size: 13px; color: var(--lilas-2); margin-top: 6px; }
+
+/* form */
+.form-card { background: var(--branco); color: var(--tinta); border-radius: 24px; padding: 30px; box-shadow: 0 24px 60px rgba(10, 2, 35, .45); scroll-margin-top: 20px; }
+.form-card h2 { font-size: 24px; font-weight: 800; color: var(--roxo); }
+.form-card .apoio { font-size: 14px; color: var(--cinza); margin-top: 6px; }
+form { display: grid; gap: 14px; margin-top: 22px; }
+label { font-size: 13px; font-weight: 600; color: var(--roxo); display: grid; gap: 6px; }
+input[type=text], input[type=email], input[type=tel] { width: 100%; font: 500 16px var(--font); color: var(--tinta); padding: 14px 16px; border: 1.5px solid var(--lilas-2); border-radius: 12px; background: var(--branco); }
+input::placeholder { color: #9A90B5; }
+input[aria-invalid=true] { border-color: var(--errado); }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; font-weight: 400; color: var(--cinza); line-height: 1.5; }
+.consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--roxo-2); flex: none; }
+.erro { font-size: 13px; color: var(--errado); min-height: 0; }
+.form-card .btn { width: 100%; }
+.seguro { font-size: 12px; color: var(--cinza); text-align: center; }
+.sucesso { display: grid; gap: 14px; text-align: left; }
+.sucesso h2 { font-size: 26px; }
+.sucesso p { color: var(--cinza); font-size: 15px; }
+.sucesso .btn { width: 100%; }
+.passo { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--roxo-2); margin-top: 6px; }
+
+/* faixa */
+.faixa { background: var(--amarelo); color: var(--roxo); }
+.faixa .wrap { display: flex; flex-wrap: wrap; gap: 12px 36px; justify-content: center; padding-block: 18px; font-weight: 700; font-size: 15px; }
+
+/* seções */
+.secao { padding-block: 88px; }
+.secao-lilas { background: var(--lilas); }
+.secao h2 { font-size: clamp(30px, 4.2vw, 44px); font-weight: 800; color: var(--roxo); margin-top: 12px; max-width: 18em; }
+.secao .intro { margin-top: 16px; color: var(--cinza); font-size: 17px; max-width: 40em; }
+
+.partes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 44px; }
+.parte { background: var(--branco); border-radius: var(--raio); padding: 30px; border: 1.5px solid var(--lilas-2); }
+.secao-lilas .parte { border-color: transparent; }
+.parte-topo { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.parte-tag { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--roxo-2); }
+.parte-qtd { font-size: 14px; font-weight: 700; color: var(--roxo); background: var(--amarelo); padding: 4px 12px; border-radius: 999px; }
+.parte h3 { font-size: 22px; font-weight: 800; color: var(--roxo); margin-top: 12px; }
+.parte ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 8px; font-size: 14.5px; color: var(--tinta); }
+.parte li { padding-left: 18px; position: relative; }
+.parte li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px; border-radius: 2px; background: var(--roxo-2); }
+
+/* exemplo de questão */
+.exemplo { margin-top: 44px; background: var(--roxo); color: var(--branco); border-radius: 24px; padding: 34px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
+.exemplo .rot { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--amarelo); }
+.exemplo blockquote { margin: 12px 0 0; font-size: 18px; line-height: 1.55; font-weight: 500; }
+.ce { display: flex; gap: 12px; margin-top: 20px; }
+.ce button { min-width: 64px; min-height: 48px; border-radius: 12px; border: 2px solid var(--lilas-2); background: transparent; color: var(--branco); font: 800 18px var(--font); cursor: pointer; }
+.ce button:hover { border-color: var(--amarelo); }
+.ce button[aria-pressed=true] { background: var(--amarelo); color: var(--roxo); border-color: var(--amarelo); }
+.resp { background: rgba(255,255,255,.08); border-radius: 16px; padding: 22px; font-size: 15px; color: var(--lilas-2); display: grid; gap: 10px; align-content: start; }
+.resp strong.ok { color: #7BE3A6; }
+.resp strong.no { color: #FF9C93; }
+.resp .gab { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--amarelo); }
+
+/* argumento */
+.argumento { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.pergunta { font-size: clamp(26px, 3.4vw, 36px); font-weight: 800; color: var(--roxo); line-height: 1.2; }
+.pergunta span { background: linear-gradient(transparent 62%, var(--amarelo) 62%); }
+.argumento p + p { margin-top: 14px; }
+.argumento .txt { color: var(--cinza); font-size: 16.5px; }
+
+/* programa */
+.programa { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 28px; margin-top: 44px; align-items: start; }
+.itens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.item { background: var(--branco); border-radius: var(--raio); padding: 22px; }
+.item strong { display: block; color: var(--roxo); font-size: 16px; font-weight: 700; margin-top: 12px; }
+.item span { display: block; color: var(--cinza); font-size: 14px; margin-top: 4px; }
+.preco { background: var(--roxo); color: var(--branco); border-radius: 24px; padding: 32px; display: grid; gap: 14px; }
+.preco .bf { justify-self: start; background: var(--amarelo); color: var(--roxo); font-weight: 800; font-size: 12px; letter-spacing: .14em; padding: 6px 14px; border-radius: 999px; }
+.preco .de { color: var(--lilas-2); font-size: 15px; }
+.preco .de s { color: var(--lilas-2); }
+.preco .valor { font-size: 56px; font-weight: 800; color: var(--amarelo); line-height: 1; }
+.preco .cond { font-size: 14px; color: var(--lilas-2); }
+.escada { display: grid; gap: 8px; margin-top: 4px; border-top: 1px solid rgba(255,255,255,.15); padding-top: 16px; font-size: 14px; }
+.escada div { display: flex; justify-content: space-between; gap: 12px; color: var(--lilas-2); }
+.escada div:first-child { color: var(--branco); font-weight: 700; }
+.escada b { font-variant-numeric: tabular-nums; }
+
+/* professor */
+.prof { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: center; }
+.prof img { border-radius: 24px; aspect-ratio: 1 / 1; object-fit: cover; width: 100%; }
+.prof .txt { color: var(--cinza); font-size: 16.5px; margin-top: 16px; }
+.prof .txt + .txt { margin-top: 12px; }
+
+/* faq */
+.faq { display: grid; gap: 12px; margin-top: 40px; max-width: 820px; }
+details { background: var(--branco); border-radius: 16px; padding: 4px 22px; }
+summary { cursor: pointer; font-weight: 700; color: var(--roxo); padding-block: 16px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--roxo-2); }
+details[open] summary::after { content: "–"; }
+details p { color: var(--cinza); font-size: 15px; padding-bottom: 18px; }
+
+/* final */
+.final { background: var(--roxo); color: var(--branco); text-align: center; }
+.final .wrap { padding-block: 80px; display: grid; justify-items: center; gap: 18px; }
+.final h2 { font-size: clamp(30px, 4.6vw, 48px); font-weight: 800; color: var(--branco); }
+.final h2 em { font-style: normal; color: var(--amarelo); }
+.final p { color: var(--lilas-2); max-width: 36em; }
+.final .acoes { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+.btn-contorno { background: transparent; color: var(--branco); border: 2px solid var(--lilas-2); }
+.btn-contorno:hover { border-color: var(--amarelo); color: var(--amarelo); }
+
+footer { background: #170540; color: var(--lilas-2); font-size: 13px; }
+footer .wrap { padding-block: 34px; display: grid; gap: 14px; }
+footer h3 { font-size: 14px; color: var(--branco); letter-spacing: 0; }
+footer p { max-width: 70em; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .argumento, .programa, .prof, .exemplo { grid-template-columns: minmax(0, 1fr); }
+  .hero .wrap { gap: 36px; }
+  .partes, .itens { grid-template-columns: minmax(0, 1fr); }
+  .secao { padding-block: 64px; }
+  .prof img { max-width: 360px; }
+}
+@media (max-width: 420px) {
+  .form-card, .parte, .preco, .exemplo { padding: 22px; }
+  .preco .valor { font-size: 46px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <div class="marca">
+      <span class="marca-selo" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+      Prof. Rodrigo Francelino
+    </div>
+    <a class="topo-link" href="#cadastro">Receber a degustação grátis</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="selo">Degustação gratuita | SEEDF</span>
+      <h1>300 questões comentadas. <em>De graça.</em></h1>
+      <p class="sub">Receba uma meta completa do Programa de Metas, do jeito que os alunos recebem, com LODF e Gestão Escolar: conteúdo comum a todos os cargos da Secretaria de Educação do DF.</p>
+      <ul class="lista-hero">
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Questões no formato certo ou errado, o mesmo modelo cobrado neste concurso</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Gabarito comentado, com a explicação de cada resposta</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Serve para professor, monitor, área administrativa e demais cargos</li>
+      </ul>
+      <div class="prova-num" aria-label="O que tem na degustação">
+        <div><strong>300</strong><span>questões</span></div>
+        <div><strong>2</strong><span>temas completos</span></div>
+        <div><strong>100%</strong><span>comentadas</span></div>
+      </div>
+    </div>
+
+    <div class="form-card" id="cadastro">
+      <div id="form-area">
+        <h2>Receba a degustação agora</h2>
+        <p class="apoio">Preencha seus dados e baixe o PDF na hora.</p>
+        <form id="form-lead" novalidate>
+          <label for="nome">Seu nome
+            <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como você quer ser chamado" required>
+          </label>
+          <label for="whatsapp">WhatsApp com DDD
+            <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(61) 90000-0000" required>
+          </label>
+          <label for="email">Seu melhor e-mail
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com" required>
+          </label>
+          <label class="consent" for="consentimento">
+            <input type="checkbox" id="consentimento" name="consentimento" required>
+            <span>Aceito receber a degustação e outros materiais do Prof. Rodrigo Francelino por e-mail e WhatsApp, conforme a <a href="#privacidade">política de privacidade</a>.</span>
+          </label>
+          <p class="erro" id="erro" role="alert" hidden></p>
+          <button class="btn btn-amarelo" type="submit" id="enviar">Quero minhas 300 questões grátis</button>
+          <p class="seguro">Sem spam. Você pode pedir para sair da lista quando quiser.</p>
+        </form>
+      </div>
+
+      <div class="sucesso" id="sucesso" hidden>
+        <span class="selo">Pronto!</span>
+        <h2 id="sucesso-titulo">Sua degustação está liberada.</h2>
+        <p>Siga os dois passos abaixo. O segundo é o mais importante: é no grupo que o professor avisa sobre metas, lives e prazos.</p>
+        <p class="passo">Passo 1</p>
+        <a class="btn btn-amarelo" href="degustacao-programa-de-metas.pdf" download>Baixar a degustação (PDF)</a>
+        <p class="passo">Passo 2</p>
+        <a class="btn btn-verde" href="https://chat.whatsapp.com/BuTgVlAc4mqIfw5KMK3J9N" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa">
+  <div class="wrap">
+    <span>Formato certo ou errado</span>
+    <span>Gabarito comentado</span>
+    <span>Conteúdo comum a todos os cargos</span>
+  </div>
+</div>
+
+<section class="secao">
+  <div class="wrap">
+    <p class="eyebrow">O que você vai receber</p>
+    <h2>Uma meta real, dividida em duas partes</h2>
+    <p class="intro">Cada parte tem 150 questões organizadas por tema, com o gabarito comentado logo em seguida. Resolva sem consultar, confira as respostas e volte nos pontos que errou.</p>
+    <div class="partes">
+      <article class="parte">
+        <div class="parte-topo"><span class="parte-tag">Parte 1</span><span class="parte-qtd">150 questões</span></div>
+        <h3>Lei Orgânica do Distrito Federal</h3>
+        <ul>
+          <li>Fundamentos da organização dos Poderes e do DF</li>
+          <li>Organização administrativa e Regiões Administrativas</li>
+          <li>Competências e vedações do Distrito Federal</li>
+          <li>Administração pública e administração tributária</li>
+          <li>Servidores públicos e bens do Distrito Federal</li>
+        </ul>
+      </article>
+      <article class="parte">
+        <div class="parte-topo"><span class="parte-tag">Parte 2</span><span class="parte-qtd">150 questões</span></div>
+        <h3>Gestão Escolar</h3>
+        <ul>
+          <li>Gestão democrática e a Lei de Gestão Democrática do DF</li>
+          <li>Projeto Político-Pedagógico (PPP)</li>
+          <li>Conselhos escolares: funções e composição</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="exemplo" id="exemplo">
+      <div>
+        <p class="rot">Teste agora: uma questão da degustação</p>
+        <blockquote>"O Distrito Federal, no exercício de sua autonomia política, administrativa e financeira, reger-se-á pela Lei Orgânica, desde que observados os princípios estabelecidos na Constituição Federal."</blockquote>
+        <div class="ce" role="group" aria-label="Sua resposta">
+          <button type="button" id="btn-c" aria-pressed="false">C</button>
+          <button type="button" id="btn-e" aria-pressed="false">E</button>
+        </div>
+      </div>
+      <div class="resp" id="resp" aria-live="polite">
+        <p class="gab">Gabarito comentado</p>
+        <p id="resp-texto">Escolha certo (C) ou errado (E) para ver a resposta e o comentário.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-lilas">
+  <div class="wrap argumento">
+    <div>
+      <p class="eyebrow">Por que questões</p>
+      <p class="pergunta" style="margin-top:12px">No último concurso que você fez, <span>quantas questões você resolveu?</span></p>
+    </div>
+    <div>
+      <p class="txt">A maioria dos candidatos tem material de sobra: PDFs, videoaulas, apostilas e assinaturas de cursos. O que falta é organização e treino com o que de fato cai na prova.</p>
+      <p class="txt">O Programa de Metas transforma o edital em tarefas semanais de questões. Você não precisa decidir o que estudar: o caminho já vem pronto, e você testa na prática se aprendeu o conteúdo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <p class="eyebrow">Gostou da degustação?</p>
+    <h2>No Programa de Metas é assim toda semana, até o dia da prova</h2>
+    <div class="programa">
+      <div class="itens">
+        <div class="item"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><strong>Até 200 questões por meta</strong><span>Organizadas por assunto do edital, todas comentadas.</span></div>
+        <div class="item"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><strong>Primeira meta em 8 de dezembro</strong><span>Duas metas por semana antes do edital e três depois.</span></div>
+        <div class="item"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><strong>Acesso até a data da prova</strong><span>Não importa quando o edital for publicado.</span></div>
+        <div class="item"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><strong>50% de desconto</strong><span>Em todos os produtos do Prof. Francelino, com prioridade nos lançamentos.</span></div>
+      </div>
+      <div class="preco">
+        <span class="bf">BLACK FRIDAY</span>
+        <p class="de">Valor regular <s>R$ 197,00</s></p>
+        <p class="valor">R$ 97,00</p>
+        <p class="cond">Pagamento único, por Pix, boleto ou cartão. Válido até 30/11 ou até a publicação do edital, o que acontecer primeiro.</p>
+        <a class="btn btn-amarelo" href="https://chk.eduzz.com/40QR2PJJ9B?a=38704104" target="_blank" rel="noopener">Garantir minha vaga</a>
+        <div class="escada" aria-label="Como o valor muda">
+          <div><span>Até 30 de novembro</span><b>R$ 97,00</b></div>
+          <div><span>De 1º a 8 de dezembro</span><b>R$ 197,00</b></div>
+          <div><span>Depois de 8 de dezembro</span><b>R$ 297,00</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-lilas">
+  <div class="wrap prof">
+    <img src="professor-francelino.jpg" alt="Prof. Rodrigo Francelino sorrindo, de braços cruzados, em uma sala de aula" width="620" height="645" loading="lazy">
+    <div>
+      <p class="eyebrow">Quem prepara as metas</p>
+      <h2>Prof. Rodrigo Francelino</h2>
+      <p class="txt">Professor de concursos públicos do Distrito Federal e criador do Programa de Metas, o método que organiza todo o edital em baterias de questões comentadas.</p>
+      <p class="txt">Antes da SEEDF, o programa já acompanhou alunos na preparação para o concurso da SEDES/DF. Agora, o mesmo método chega à Secretaria de Educação.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap">
+    <p class="eyebrow">Dúvidas frequentes</p>
+    <h2>Antes de baixar</h2>
+    <div class="faq">
+      <details><summary>A degustação é gratuita mesmo?</summary><p>Sim. Você preenche o cadastro e baixa o PDF na hora, sem pagar nada.</p></details>
+      <details><summary>Serve para o meu cargo?</summary><p>Sim. LODF e Gestão Escolar fazem parte do conteúdo comum, cobrado de todos os cargos da SEEDF.</p></details>
+      <details><summary>O Programa de Metas é um curso de videoaulas?</summary><p>Não. São metas em PDF com questões comentadas. Você pode usar como material principal ou como apoio ao curso que já tem.</p></details>
+      <details><summary>O que acontece com os meus dados?</summary><p>Usamos seu contato apenas para enviar a degustação e materiais sobre o Programa de Metas e concursos. Você pode pedir para sair da lista a qualquer momento.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Teste o método. <em>Sinta a diferença.</em></h2>
+    <p>São 300 questões comentadas para você descobrir, na prática, como é estudar com metas.</p>
+    <div class="acoes">
+      <a class="btn btn-amarelo" href="#cadastro">Quero a degustação grátis</a>
+      <a class="btn btn-contorno" href="https://chk.eduzz.com/40QR2PJJ9B?a=38704104" target="_blank" rel="noopener">Já quero o programa completo</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3 id="privacidade">Política de privacidade</h3>
+    <p>Os dados informados neste formulário (nome, WhatsApp e e-mail) são usados exclusivamente para enviar a degustação e comunicações sobre o Programa de Metas e outros materiais do Prof. Rodrigo Francelino. Os dados não são vendidos nem compartilhados com terceiros. Você pode pedir a exclusão dos seus dados a qualquer momento pelos administradores do grupo de estudos, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+    <p>© 2026 Prof. Rodrigo Francelino. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+// Cole aqui a URL do Google Apps Script (ver instruções). Enquanto estiver vazia, o formulário funciona, mas não salva os cadastros.
+const ENDPOINT = "";
+
+(function () {
+  const form = document.getElementById("form-lead");
+  const erro = document.getElementById("erro");
+  const btn = document.getElementById("enviar");
+
+  function mostrarErro(msg, campo) {
+    erro.textContent = msg; erro.hidden = false;
+    if (campo) { campo.setAttribute("aria-invalid", "true"); campo.focus(); }
+  }
+
+  const tel = document.getElementById("whatsapp");
+  tel.addEventListener("input", function () {
+    let d = tel.value.replace(/\D/g, "").slice(0, 11);
+    if (d.length > 6) tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2, d.length - 4) + "-" + d.slice(-4);
+    else if (d.length > 2) tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2);
+    else tel.value = d;
+  });
+
+  form.addEventListener("submit", async function (ev) {
+    ev.preventDefault();
+    erro.hidden = true;
+    form.querySelectorAll("[aria-invalid]").forEach(el => el.removeAttribute("aria-invalid"));
+    const nome = document.getElementById("nome");
+    const email = document.getElementById("email");
+    const cons = document.getElementById("consentimento");
+    const digitos = tel.value.replace(/\D/g, "");
+    if (nome.value.trim().length < 2) return mostrarErro("Digite seu nome.", nome);
+    if (digitos.length < 10) return mostrarErro("Digite seu WhatsApp com DDD, por exemplo (61) 99999-9999.", tel);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) return mostrarErro("Digite um e-mail válido, por exemplo voce@email.com.", email);
+    if (!cons.checked) return mostrarErro("Marque a caixa de autorização para receber a degustação.", cons);
+
+    btn.disabled = true; btn.textContent = "Liberando sua degustação...";
+    const dados = new URLSearchParams({
+      nome: nome.value.trim(), whatsapp: digitos, email: email.value.trim(),
+      origem: "degustacao-seedf", pagina: location.href
+    });
+    if (ENDPOINT) {
+      try { await fetch(ENDPOINT, { method: "POST", mode: "no-cors", body: dados }); } catch (e) { /* segue para liberar o PDF mesmo assim */ }
+    }
+    const primeiro = nome.value.trim().split(" ")[0];
+    document.getElementById("sucesso-titulo").textContent = primeiro + ", sua degustação está liberada.";
+    document.getElementById("form-area").hidden = true;
+    document.getElementById("sucesso").hidden = false;
+    document.getElementById("cadastro").scrollIntoView({ block: "start" });
+  });
+
+  // Questão de exemplo
+  const resp = document.getElementById("resp-texto");
+  const bc = document.getElementById("btn-c"), be = document.getElementById("btn-e");
+  function responder(escolha) {
+    bc.setAttribute("aria-pressed", escolha === "C"); be.setAttribute("aria-pressed", escolha === "E");
+    const acertou = escolha === "C";
+    resp.innerHTML = (acertou ? '<strong class="ok">Você acertou! O item está CERTO.</strong>' : '<strong class="no">Não foi dessa vez. O item está CERTO.</strong>') +
+      "<br>O Distrito Federal rege-se pela Lei Orgânica, observados os princípios da Constituição Federal. Na degustação são mais 299 questões como esta, todas comentadas.";
+  }
+  bc.addEventListener("click", () => responder("C"));
+  be.addEventListener("click", () => responder("E"));
+})();
+</script>
+</body>
+</html>
