@@ -10,6 +10,6 @@ function doPost(e) {
     aba.appendRow(["Data e hora", "Nome", "WhatsApp", "E-mail", "Origem", "Página"]);
   }
   const p = e.parameter;
-  aba.appendRow([new Date(), p.nome || "", "'" + (p.whatsapp || ""), p.email || "", p.origem || "", p.pagina || ""]);
+  aba.appendRow([Utilities.formatDate(new Date(), "America/Sao_Paulo", "dd/MM/yyyy HH:mm:ss"), p.nome || "", "'" + (p.whatsapp || ""), p.email || "", p.origem || "", p.pagina || ""]);
   return ContentService.createTextOutput("ok");
 }
