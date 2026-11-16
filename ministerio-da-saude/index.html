@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Edital Verticalizado PSS Ministério da Saúde</title>
+<meta name="description" content="Baixe grátis o edital verticalizado do PSS do Ministério da Saúde: todo o conteúdo programático organizado em checklist, com vagas, salários e cronograma.">
+<meta property="og:title" content="Edital verticalizado grátis: PSS Ministério da Saúde">
+<meta property="og:description" content="Todo o conteúdo programático organizado em checklist. Material gratuito do Prof. Rodrigo Francelino.">
+<meta property="og:image" content="professor-francelino.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: faixa roxa de abertura com formulário fixo à direita, seções claras em coluna única de 1080px, fechamento roxo */
+:root {
+  --roxo: #0B3C46;
+  --roxo-2: #0E7C74;
+  --lilas: #E8F5F1;
+  --lilas-2: #BFE5DA;
+  --amarelo: #43D59B;
+  --amarelo-2: #6BE3B2;
+  --tinta: #13282C;
+  --cinza: #4E6468;
+  --branco: #FFFFFF;
+  --certo: #1E7B45;
+  --errado: #B42318;
+  --font: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --raio: 18px;
+  --max: 1080px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; font-family: var(--font); color: var(--tinta); background: var(--branco); font-size: 16px; line-height: 1.6; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { line-height: 1.12; text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+a { color: inherit; }
+.wrap { max-width: var(--max); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--roxo-2); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 14px 28px; border-radius: 999px; border: 0; font: 700 16px/1.2 var(--font); text-decoration: none; cursor: pointer; transition: transform .15s ease, background .15s ease; }
+.btn:focus-visible, input:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+.btn-amarelo { background: var(--amarelo); color: var(--roxo); }
+.btn-amarelo:hover { background: var(--amarelo-2); transform: translateY(-1px); }
+.btn-roxo { background: var(--roxo); color: var(--branco); }
+.btn-roxo:hover { background: var(--roxo-2); }
+.btn-verde { background: #1FA855; color: var(--branco); }
+.btn-verde:hover { background: #178C46; }
+
+/* topo */
+.topo { background: var(--roxo); color: var(--branco); }
+.topo .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 18px; flex-wrap: wrap; }
+.marca { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 15px; }
+.marca-selo { width: 34px; height: 34px; border-radius: 10px; background: var(--amarelo); display: grid; place-items: center; }
+.topo-link { font-size: 14px; font-weight: 600; color: var(--amarelo); text-decoration: none; }
+
+/* hero */
+.hero { background: var(--roxo); color: var(--branco); padding-bottom: 72px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; right: -120px; top: -140px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(14,124,116,.55), rgba(14,124,116,0) 70%); pointer-events: none; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; align-items: start; padding-block: 40px 0; position: relative; z-index: 1; }
+.selo { display: inline-flex; background: var(--amarelo); color: var(--roxo); font-weight: 800; font-size: 13px; letter-spacing: .12em; padding: 8px 16px; border-radius: 999px; text-transform: uppercase; }
+.hero h1 { font-size: clamp(38px, 6vw, 64px); font-weight: 800; margin-top: 22px; }
+.hero h1 em { font-style: normal; color: var(--amarelo); }
+.hero .sub { margin-top: 20px; font-size: 18px; color: var(--lilas-2); max-width: 34em; }
+.lista-hero { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+.lista-hero li { display: flex; gap: 14px; align-items: flex-start; font-weight: 500; }
+.check { flex: none; width: 26px; height: 26px; border-radius: 8px; background: var(--amarelo); display: grid; place-items: center; margin-top: 1px; }
+.check svg { width: 15px; height: 15px; }
+.prova-num { display: flex; gap: 28px; margin-top: 34px; flex-wrap: wrap; }
+.prova-num div { display: grid; }
+.prova-num strong { font-size: 34px; font-weight: 800; color: var(--amarelo); line-height: 1; }
+.prova-num span { font-size: 13px; color: var(--lilas-2); margin-top: 6px; }
+
+/* form */
+.form-card { background: var(--branco); color: var(--tinta); border-radius: 24px; padding: 30px; box-shadow: 0 24px 60px rgba(2, 25, 30, .45); scroll-margin-top: 20px; }
+.form-card h2 { font-size: 24px; font-weight: 800; color: var(--roxo); }
+.form-card .apoio { font-size: 14px; color: var(--cinza); margin-top: 6px; }
+form { display: grid; gap: 14px; margin-top: 22px; }
+label { font-size: 13px; font-weight: 600; color: var(--roxo); display: grid; gap: 6px; }
+input[type=text], input[type=email], input[type=tel] { width: 100%; font: 500 16px var(--font); color: var(--tinta); padding: 14px 16px; border: 1.5px solid var(--lilas-2); border-radius: 12px; background: var(--branco); }
+input::placeholder { color: #8AA3A6; }
+input[aria-invalid=true] { border-color: var(--errado); }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; font-weight: 400; color: var(--cinza); line-height: 1.5; }
+.consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--roxo-2); flex: none; }
+.erro { font-size: 13px; color: var(--errado); min-height: 0; }
+.form-card .btn { width: 100%; }
+.seguro { font-size: 12px; color: var(--cinza); text-align: center; }
+.sucesso { display: grid; gap: 14px; text-align: left; }
+.sucesso h2 { font-size: 26px; }
+.sucesso p { color: var(--cinza); font-size: 15px; }
+.sucesso .btn { width: 100%; }
+.passo { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--roxo-2); margin-top: 6px; }
+
+/* faixa */
+.faixa { background: var(--amarelo); color: var(--roxo); }
+.faixa .wrap { display: flex; flex-wrap: wrap; gap: 12px 36px; justify-content: center; padding-block: 18px; font-weight: 700; font-size: 15px; }
+
+/* seções */
+.secao { padding-block: 88px; }
+.secao-lilas { background: var(--lilas); }
+.secao h2 { font-size: clamp(30px, 4.2vw, 44px); font-weight: 800; color: var(--roxo); margin-top: 12px; max-width: 18em; }
+.secao .intro { margin-top: 16px; color: var(--cinza); font-size: 17px; max-width: 40em; }
+
+.partes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 44px; }
+.parte { background: var(--branco); border-radius: var(--raio); padding: 30px; border: 1.5px solid var(--lilas-2); }
+.secao-lilas .parte { border-color: transparent; }
+.parte-topo { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.parte-tag { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--roxo-2); }
+.parte-qtd { font-size: 14px; font-weight: 700; color: var(--roxo); background: var(--amarelo); padding: 4px 12px; border-radius: 999px; }
+.parte h3 { font-size: 22px; font-weight: 800; color: var(--roxo); margin-top: 12px; }
+.parte ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 8px; font-size: 14.5px; color: var(--tinta); }
+.parte li { padding-left: 18px; position: relative; }
+.parte li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px; border-radius: 2px; background: var(--roxo-2); }
+
+/* exemplo de questão */
+.exemplo { margin-top: 44px; background: var(--roxo); color: var(--branco); border-radius: 24px; padding: 34px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
+.exemplo .rot { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--amarelo); }
+.exemplo blockquote { margin: 12px 0 0; font-size: 18px; line-height: 1.55; font-weight: 500; }
+.ce { display: flex; gap: 12px; margin-top: 20px; }
+.ce button { min-width: 64px; min-height: 48px; border-radius: 12px; border: 2px solid var(--lilas-2); background: transparent; color: var(--branco); font: 800 18px var(--font); cursor: pointer; }
+.ce button:hover { border-color: var(--amarelo); }
+.ce button[aria-pressed=true] { background: var(--amarelo); color: var(--roxo); border-color: var(--amarelo); }
+.resp { background: rgba(255,255,255,.08); border-radius: 16px; padding: 22px; font-size: 15px; color: var(--lilas-2); display: grid; gap: 10px; align-content: start; }
+.resp strong.ok { color: #7BE3A6; }
+.resp strong.no { color: #FF9C93; }
+.resp .gab { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--amarelo); }
+
+/* argumento */
+.argumento { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.pergunta { font-size: clamp(26px, 3.4vw, 36px); font-weight: 800; color: var(--roxo); line-height: 1.2; }
+.pergunta span { background: linear-gradient(transparent 62%, var(--amarelo) 62%); }
+.argumento p + p { margin-top: 14px; }
+.argumento .txt { color: var(--cinza); font-size: 16.5px; }
+
+/* programa */
+.programa { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 28px; margin-top: 44px; align-items: start; }
+.itens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.item { background: var(--branco); border-radius: var(--raio); padding: 22px; }
+.item strong { display: block; color: var(--roxo); font-size: 16px; font-weight: 700; margin-top: 12px; }
+.item span { display: block; color: var(--cinza); font-size: 14px; margin-top: 4px; }
+.preco { background: var(--roxo); color: var(--branco); border-radius: 24px; padding: 32px; display: grid; gap: 14px; }
+.preco .bf { justify-self: start; background: var(--amarelo); color: var(--roxo); font-weight: 800; font-size: 12px; letter-spacing: .14em; padding: 6px 14px; border-radius: 999px; }
+.preco .de { color: var(--lilas-2); font-size: 15px; }
+.preco .de s { color: var(--lilas-2); }
+.preco .valor { font-size: 56px; font-weight: 800; color: var(--amarelo); line-height: 1; }
+.preco .cond { font-size: 14px; color: var(--lilas-2); }
+.escada { display: grid; gap: 8px; margin-top: 4px; border-top: 1px solid rgba(255,255,255,.15); padding-top: 16px; font-size: 14px; }
+.escada div { display: flex; justify-content: space-between; gap: 12px; color: var(--lilas-2); }
+.escada div:first-child { color: var(--branco); font-weight: 700; }
+.escada b { font-variant-numeric: tabular-nums; }
+
+/* professor */
+.prof { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: center; }
+.prof img { border-radius: 24px; aspect-ratio: 1 / 1; object-fit: cover; width: 100%; }
+.prof .txt { color: var(--cinza); font-size: 16.5px; margin-top: 16px; }
+.prof .txt + .txt { margin-top: 12px; }
+
+/* faq */
+.faq { display: grid; gap: 12px; margin-top: 40px; max-width: 820px; }
+details { background: var(--branco); border-radius: 16px; padding: 4px 22px; }
+summary { cursor: pointer; font-weight: 700; color: var(--roxo); padding-block: 16px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--roxo-2); }
+details[open] summary::after { content: "–"; }
+details p { color: var(--cinza); font-size: 15px; padding-bottom: 18px; }
+
+/* final */
+.final { background: var(--roxo); color: var(--branco); text-align: center; }
+.final .wrap { padding-block: 80px; display: grid; justify-items: center; gap: 18px; }
+.final h2 { font-size: clamp(30px, 4.6vw, 48px); font-weight: 800; color: var(--branco); }
+.final h2 em { font-style: normal; color: var(--amarelo); }
+.final p { color: var(--lilas-2); max-width: 36em; }
+.final .acoes { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+.btn-contorno { background: transparent; color: var(--branco); border: 2px solid var(--lilas-2); }
+.btn-contorno:hover { border-color: var(--amarelo); color: var(--amarelo); }
+
+footer { background: #072A31; color: var(--lilas-2); font-size: 13px; }
+footer .wrap { padding-block: 34px; display: grid; gap: 14px; }
+footer h3 { font-size: 14px; color: var(--branco); letter-spacing: 0; }
+footer p { max-width: 70em; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .argumento, .programa, .prof, .exemplo { grid-template-columns: minmax(0, 1fr); }
+  .hero .wrap { gap: 36px; }
+  .partes, .itens { grid-template-columns: minmax(0, 1fr); }
+  .secao { padding-block: 64px; }
+  .prof img { max-width: 360px; }
+}
+@media (max-width: 420px) {
+  .form-card, .parte, .preco, .exemplo { padding: 22px; }
+  .preco .valor { font-size: 46px; }
+}
+
+.tabela-wrap { overflow-x: auto; margin-top: 36px; border-radius: var(--raio); border: 1.5px solid var(--lilas-2); }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 560px; }
+th { background: var(--roxo); color: var(--branco); text-align: left; padding: 14px 16px; font-weight: 700; }
+td { padding: 13px 16px; border-top: 1px solid var(--lilas-2); }
+tr:nth-child(even) td { background: var(--lilas); }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; color: var(--roxo); }
+.destaque { margin-top: 28px; background: var(--roxo); color: var(--branco); border-radius: 20px; padding: 26px 30px; font-size: 17px; }
+.destaque strong { color: var(--amarelo); }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <div class="marca">
+      <span class="marca-selo" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B3C46" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+      Prof. Rodrigo Francelino
+    </div>
+    <a class="topo-link" href="#cadastro">Baixar o edital verticalizado</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="selo">Material gratuito | PSS Ministério da Saúde</span>
+      <h1>O edital do Ministério da Saúde, <em>organizado para você.</em></h1>
+      <p class="sub">Baixe grátis o edital verticalizado do Processo Seletivo do Ministério da Saúde, com todo o conteúdo programático em forma de checklist, e entre no grupo de estudos do Programa de Metas.</p>
+      <ul class="lista-hero">
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3C46" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Todo o conteúdo programático, tópico por tópico, para marcar teoria, questões e revisão</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3C46" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>As 5 matérias comuns a todos os cargos em destaque</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0B3C46" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Vagas, salários, estrutura da prova e cronograma em um só lugar</li>
+      </ul>
+      <div class="prova-num" aria-label="Números do concurso">
+        <div><strong>300</strong><span>vagas imediatas</span></div>
+        <div><strong>R$ 10,3 mil</strong><span>maior salário</span></div>
+        <div><strong>17/01</strong><span>data da prova</span></div>
+      </div>
+    </div>
+
+    <div class="form-card" id="cadastro">
+      <div id="form-area">
+        <h2>Receba o edital verticalizado</h2>
+        <p class="apoio">Preencha seus dados e baixe o PDF na hora.</p>
+        <form id="form-lead" novalidate>
+          <label for="nome">Seu nome
+            <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como você quer ser chamado" required>
+          </label>
+          <label for="whatsapp">WhatsApp com DDD
+            <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(61) 90000-0000" required>
+          </label>
+          <label for="email">Seu melhor e-mail
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com" required>
+          </label>
+          <label class="consent" for="consentimento">
+            <input type="checkbox" id="consentimento" name="consentimento" required>
+            <span>Aceito receber o edital verticalizado e outros materiais do Prof. Rodrigo Francelino por e-mail e WhatsApp, conforme a <a href="#privacidade">política de privacidade</a>.</span>
+          </label>
+          <p class="erro" id="erro" role="alert" hidden></p>
+          <button class="btn btn-amarelo" type="submit" id="enviar">Quero o edital verticalizado grátis</button>
+          <p class="seguro">Sem spam. Você pode pedir para sair da lista quando quiser.</p>
+        </form>
+      </div>
+
+      <div class="sucesso" id="sucesso" hidden>
+        <span class="selo">Pronto!</span>
+        <h2 id="sucesso-titulo">Seu edital verticalizado está liberado.</h2>
+        <p>Siga os dois passos abaixo. No grupo você recebe as novidades do concurso e do Programa de Metas.</p>
+        <p class="passo">Passo 1</p>
+        <a class="btn btn-amarelo" href="edital-verticalizado-pss-ministerio-da-saude.pdf" download>Baixar o edital verticalizado (PDF)</a>
+        <p class="passo">Passo 2</p>
+        <a class="btn btn-verde" href="LINK_GRUPO_MS" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa">
+  <div class="wrap">
+    <span>Nível superior</span>
+    <span>Inscrições até 14/12/2026</span>
+    <span>Prova em 17/01/2027</span>
+  </div>
+</div>
+
+<section class="secao">
+  <div class="wrap">
+    <p class="eyebrow">O concurso</p>
+    <h2>PSS Ministério da Saúde 2026</h2>
+    <p class="intro">Processo Seletivo Simplificado para contratação temporária de profissionais de nível superior, com contrato de 1 ano, prorrogável. Banca: Instituto Avalia.</p>
+    <div class="tabela-wrap">
+      <table>
+        <thead><tr><th>Cargo</th><th>Requisito</th><th>Salário</th><th>Vagas</th></tr></thead>
+        <tbody>
+          <tr><td>401 Técnico Administrativo</td><td>Qualquer nível superior</td><td class="num">R$ 4.740,51</td><td class="num">28</td></tr>
+          <tr><td>402 Analista de Dados e Controle de Qualidade</td><td>Áreas de gestão, exatas e TI</td><td class="num">R$ 7.647,20</td><td class="num">12</td></tr>
+          <tr><td>403 Analista de Requisitos Processuais, Normativos, Econômicos, Financeiros e Políticas de Saúde</td><td>Áreas de gestão, Direito e saúde</td><td class="num">R$ 7.647,20</td><td class="num">218</td></tr>
+          <tr><td>404 Analista Técnico em Edificações</td><td>Engenharia Civil ou Arquitetura</td><td class="num">R$ 7.647,20</td><td class="num">8</td></tr>
+          <tr><td>405 Analista Técnico em Equipamentos</td><td>Áreas da saúde e engenharia biomédica</td><td class="num">R$ 7.647,20</td><td class="num">18</td></tr>
+          <tr><td>406 Gestor</td><td>Áreas de gestão, Direito e saúde</td><td class="num">R$ 10.354,29</td><td class="num">16</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="intro" style="font-size:14px">Além do salário: auxílio-alimentação de R$ 1.192,00. Lotação e prova em Brasília, Belém, Belo Horizonte, Curitiba, Goiânia, Recife e São Paulo. Requisitos completos no edital.</p>
+  </div>
+</section>
+
+<section class="secao secao-lilas">
+  <div class="wrap">
+    <p class="eyebrow">Onde concentrar o estudo</p>
+    <h2>5 matérias caem para todos os cargos</h2>
+    <div class="partes">
+      <article class="parte">
+        <div class="parte-topo"><span class="parte-tag">Conhecimentos gerais</span><span class="parte-qtd">20 questões</span></div>
+        <h3>Base comum</h3>
+        <ul>
+          <li>Língua Portuguesa: 5 questões</li>
+          <li>Raciocínio Lógico: 5 questões</li>
+          <li>Direito Administrativo: 5 questões</li>
+          <li>Direito Constitucional: 5 questões</li>
+        </ul>
+      </article>
+      <article class="parte">
+        <div class="parte-topo"><span class="parte-tag">Conhecimentos específicos</span><span class="parte-qtd">20 questões</span></div>
+        <h3>Legislação Federal do SUS</h3>
+        <ul>
+          <li>Leis nº 8.080/1990 e nº 8.142/1990</li>
+          <li>Decretos nº 7.508/2011 e nº 1.232/1994</li>
+          <li>Lei Complementar nº 141/2012</li>
+          <li>No cargo de Gestor, são 10 questões, mais 3 matérias exclusivas</li>
+        </ul>
+      </article>
+    </div>
+    <p class="destaque">Para os cargos 401 a 405, <strong>a prova inteira é feita dessas 5 matérias</strong>. E a Legislação do SUS sozinha vale <strong>metade das questões</strong>.</p>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="wrap prof">
+    <img src="professor-francelino.jpg" alt="Prof. Rodrigo Francelino sorrindo, de braços cruzados" width="620" height="645" loading="lazy">
+    <div>
+      <p class="eyebrow">Quem preparou este material</p>
+      <h2>Prof. Rodrigo Francelino</h2>
+      <p class="txt">Professor de concursos públicos e criador do Programa de Metas, o método que organiza todo o edital em baterias de questões comentadas.</p>
+      <p class="txt">O programa já acompanhou alunos na preparação para a SEDES/DF e para a Secretaria de Educação do DF. Agora, o foco é o Ministério da Saúde.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-lilas">
+  <div class="wrap">
+    <p class="eyebrow">Dúvidas frequentes</p>
+    <h2>Antes de baixar</h2>
+    <div class="faq">
+      <details><summary>O edital verticalizado é gratuito?</summary><p>Sim. Você preenche o cadastro e baixa o PDF na hora, sem pagar nada.</p></details>
+      <details><summary>Serve para o meu cargo?</summary><p>Sim. O material traz o conteúdo de todos os cargos, do 401 ao 406, e destaca as matérias comuns a todos.</p></details>
+      <details><summary>O que é o grupo do Programa de Metas?</summary><p>É o grupo de WhatsApp onde o professor envia avisos sobre o concurso, materiais e as novidades do Programa de Metas do Ministério da Saúde.</p></details>
+      <details><summary>O que acontece com os meus dados?</summary><p>Usamos seu contato apenas para enviar o material e comunicações sobre concursos e o Programa de Metas. Você pode pedir para sair da lista a qualquer momento.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Faltam poucas semanas. <em>Comece organizado.</em></h2>
+    <p>Baixe o edital verticalizado e saiba exatamente o que estudar até 17 de janeiro.</p>
+    <div class="acoes">
+      <a class="btn btn-amarelo" href="#cadastro">Quero o edital verticalizado grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3 id="privacidade">Política de privacidade</h3>
+    <p>Os dados informados neste formulário (nome, WhatsApp e e-mail) são usados exclusivamente para enviar o material solicitado e comunicações sobre o Programa de Metas e outros materiais do Prof. Rodrigo Francelino. Os dados não são vendidos nem compartilhados com terceiros. Você pode pedir a exclusão dos seus dados a qualquer momento pelos administradores do grupo de estudos, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+    <p>Este material não tem vínculo com o Ministério da Saúde nem com a banca organizadora. As informações foram retiradas do Edital nº 1, de 11 de novembro de 2026.</p>
+    <p>© 2026 Prof. Rodrigo Francelino. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script>
+// URL do Google Apps Script que grava os cadastros na planilha "Leads Programa de Metas".
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbyKwInHuHjVgyLiNNXdWt0JHvTwyjedyXyjyUOLcj2nTXrRFjAqoJGHogD3mNXhU6c9Tw/exec";
+
+(function () {
+  const form = document.getElementById("form-lead");
+  const erro = document.getElementById("erro");
+  const btn = document.getElementById("enviar");
+
+  function mostrarErro(msg, campo) {
+    erro.textContent = msg; erro.hidden = false;
+    if (campo) { campo.setAttribute("aria-invalid", "true"); campo.focus(); }
+  }
+
+  const tel = document.getElementById("whatsapp");
+  tel.addEventListener("input", function () {
+    let d = tel.value.replace(/\D/g, "").slice(0, 11);
+    if (d.length > 6) tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2, d.length - 4) + "-" + d.slice(-4);
+    else if (d.length > 2) tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2);
+    else tel.value = d;
+  });
+
+  form.addEventListener("submit", async function (ev) {
+    ev.preventDefault();
+    erro.hidden = true;
+    form.querySelectorAll("[aria-invalid]").forEach(el => el.removeAttribute("aria-invalid"));
+    const nome = document.getElementById("nome");
+    const email = document.getElementById("email");
+    const cons = document.getElementById("consentimento");
+    const digitos = tel.value.replace(/\D/g, "");
+    if (nome.value.trim().length < 2) return mostrarErro("Digite seu nome.", nome);
+    if (digitos.length < 10) return mostrarErro("Digite seu WhatsApp com DDD, por exemplo (61) 99999-9999.", tel);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) return mostrarErro("Digite um e-mail válido, por exemplo voce@email.com.", email);
+    if (!cons.checked) return mostrarErro("Marque a caixa de autorização para receber a degustação.", cons);
+
+    btn.disabled = true; btn.textContent = "Liberando sua degustação...";
+    const dados = new URLSearchParams({
+      nome: nome.value.trim(), whatsapp: digitos, email: email.value.trim(),
+      origem: "edital-ms", pagina: location.href
+    });
+    if (ENDPOINT) {
+      try { await fetch(ENDPOINT, { method: "POST", mode: "no-cors", body: dados }); } catch (e) { /* segue para liberar o PDF mesmo assim */ }
+    }
+    const primeiro = nome.value.trim().split(" ")[0];
+    document.getElementById("sucesso-titulo").textContent = primeiro + ", seu edital verticalizado está liberado.";
+    document.getElementById("form-area").hidden = true;
+    document.getElementById("sucesso").hidden = false;
+    document.getElementById("cadastro").scrollIntoView({ block: "start" });
+  });
+
+})();
+</script>
+</body>
+</html>
