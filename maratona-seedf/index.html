@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maratona SEEDF | Programa de Metas</title>
+<meta name="description" content="Maratona SEEDF do Prof. Rodrigo Francelino: 12 aulas ao vivo até a Meta 1. Baixe grátis o material de cada aula.">
+<meta property="og:title" content="Maratona SEEDF: 12 aulas até a Meta 1">
+<meta property="og:description" content="Aulas ao vivo às 19h, segundas, quartas e quintas. Baixe grátis o material de cada aula.">
+<meta property="og:image" content="https://programademetas.com.br/seedf/professor-francelino.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root {
+  --roxo: #22095C;
+  --roxo-2: #4B1FB0;
+  --roxo-3: #2E1270;
+  --lilas: #F1ECFB;
+  --lilas-2: #D9CFF5;
+  --amarelo: #FFC400;
+  --amarelo-2: #FFD84D;
+  --tinta: #1E1438;
+  --cinza: #5D5478;
+  --branco: #FFFFFF;
+  --vermelho: #E5252A;
+  --errado: #B42318;
+  --font: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --max: 1080px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; font-family: var(--font); color: var(--tinta); background: var(--branco); font-size: 16px; line-height: 1.6; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { line-height: 1.12; text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+a { color: inherit; }
+.wrap { max-width: var(--max); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 13px 26px; border-radius: 999px; border: 2px solid transparent; font: 700 15.5px/1.2 var(--font); text-decoration: none; cursor: pointer; text-align: center; transition: transform .15s ease, background .15s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn:focus-visible, input:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+.btn-amarelo { background: var(--amarelo); color: var(--roxo); }
+.btn-amarelo:hover { background: var(--amarelo-2); }
+.btn-contorno { border-color: rgba(255,255,255,.5); color: var(--branco); background: transparent; }
+.btn-contorno:hover { border-color: var(--branco); }
+.btn-roxo { background: var(--roxo); color: var(--branco); }
+.btn-roxo:hover { background: var(--roxo-2); }
+
+/* topo */
+.topo { background: var(--roxo); color: var(--branco); }
+.topo .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 16px; flex-wrap: wrap; }
+.marca { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 15px; text-decoration: none; }
+.marca-selo { width: 34px; height: 34px; border-radius: 10px; background: var(--amarelo); display: grid; place-items: center; }
+.btn-login { min-height: 40px; padding: 8px 18px; font-size: 14px; }
+
+/* hero */
+.hero { background: var(--roxo); color: var(--branco); padding-block: 36px 72px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; right: -140px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(75,31,176,.6), rgba(75,31,176,0) 70%); pointer-events: none; }
+.hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 40px; align-items: center; }
+.ao-vivo { display: inline-flex; align-items: center; gap: 10px; background: var(--amarelo); color: var(--roxo); font-weight: 800; font-size: 14px; letter-spacing: .06em; padding: 8px 18px; border-radius: 999px; }
+.ao-vivo i { width: 10px; height: 10px; border-radius: 50%; background: var(--vermelho); }
+.hero h1 { font-size: clamp(44px, 8vw, 84px); font-weight: 800; margin-top: 20px; line-height: .98; }
+.hero h1 em { font-style: normal; color: var(--amarelo); display: block; }
+.hero .sub { margin-top: 18px; font-size: 22px; font-weight: 700; }
+.hero .quando { margin-top: 6px; color: var(--lilas-2); font-size: 17px; }
+.hero .acoes { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.foto { justify-self: center; width: min(100%, 340px); }
+.foto img { border-radius: 26px; aspect-ratio: 620 / 645; object-fit: cover; box-shadow: 0 30px 70px rgba(10,2,35,.5); }
+
+/* aviso */
+.aviso { background: var(--amarelo); color: var(--roxo); }
+.aviso .wrap { padding-block: 16px; display: flex; gap: 10px 24px; justify-content: center; flex-wrap: wrap; font-weight: 700; font-size: 15px; text-align: center; }
+
+/* aulas */
+.secao { padding-block: 72px; }
+.secao-lilas { background: var(--lilas); }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--roxo-2); }
+.secao h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: var(--roxo); margin-top: 10px; }
+.secao .intro { margin-top: 12px; color: var(--cinza); font-size: 16.5px; max-width: 42em; }
+.aulas { list-style: none; padding: 0; margin: 36px 0 0; display: grid; gap: 12px; }
+.aula { display: grid; grid-template-columns: 44px 112px minmax(0, 1fr) auto; gap: 14px; align-items: center; background: var(--branco); border-radius: 18px; padding: 14px 16px; border: 1.5px solid var(--lilas-2); }
+.aula .num { font-weight: 800; font-size: 20px; color: var(--roxo-2); text-align: center; }
+.aula .data { background: var(--roxo); color: var(--branco); font-weight: 700; font-size: 13.5px; border-radius: 999px; padding: 6px 10px; text-align: center; white-space: nowrap; }
+.aula .tema { font-weight: 600; font-size: 15.5px; color: var(--tinta); }
+.aula .tema small { display: block; font-weight: 500; font-size: 12.5px; color: var(--cinza); margin-top: 2px; }
+.aula .acao { display: flex; justify-content: flex-end; }
+.aula .btn { min-height: 42px; padding: 9px 18px; font-size: 14px; }
+.tag { font-size: 12px; font-weight: 700; letter-spacing: .04em; border-radius: 999px; padding: 7px 14px; white-space: nowrap; }
+.tag-breve { background: var(--lilas); color: var(--cinza); }
+.aula.hoje { background: var(--amarelo); border-color: var(--amarelo); }
+.aula.hoje .data { background: var(--roxo); }
+.aula.hoje .tema small { color: var(--roxo); }
+.aula.passou .data { background: var(--roxo-2); }
+
+/* cta */
+.cta { background: var(--roxo); color: var(--branco); border-radius: 28px; padding: 40px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 32px; align-items: center; }
+.cta h2 { color: var(--branco); margin-top: 8px; }
+.cta .eyebrow { color: var(--amarelo); }
+.cta ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 10px; color: var(--lilas-2); }
+.cta li { display: flex; gap: 10px; }
+.cta li::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 3px; border-radius: 6px; background: var(--amarelo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322095C' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 13px no-repeat; }
+.preco { background: rgba(255,255,255,.08); border-radius: 20px; padding: 26px; display: grid; gap: 10px; text-align: center; }
+.preco .de { font-size: 14px; color: var(--lilas-2); }
+.preco strong { font-size: 48px; font-weight: 800; color: var(--amarelo); line-height: 1; }
+.preco .ate { font-size: 13.5px; color: var(--lilas-2); }
+.preco .btn { width: 100%; }
+
+/* modal */
+dialog { border: 0; padding: 0; border-radius: 24px; width: min(440px, calc(100% - 32px)); box-shadow: 0 30px 80px rgba(10,2,35,.5); }
+dialog::backdrop { background: rgba(23,5,64,.7); }
+.modal { padding: 28px; display: grid; gap: 14px; }
+.modal h2 { font-size: 22px; font-weight: 800; color: var(--roxo); }
+.modal .apoio { font-size: 14px; color: var(--cinza); }
+.modal form { display: grid; gap: 12px; }
+.modal label { font-size: 13px; font-weight: 600; color: var(--roxo); display: grid; gap: 6px; }
+.modal input[type=text], .modal input[type=email], .modal input[type=tel] { width: 100%; font: 500 16px var(--font); color: var(--tinta); padding: 13px 15px; border: 1.5px solid var(--lilas-2); border-radius: 12px; }
+.modal input[aria-invalid=true] { border-color: var(--errado); }
+.consent { display: flex !important; gap: 10px; align-items: flex-start; font-size: 12.5px !important; font-weight: 400 !important; color: var(--cinza) !important; line-height: 1.5; }
+.consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--roxo-2); flex: none; }
+.erro { font-size: 13px; color: var(--errado); }
+.modal .btn { width: 100%; }
+.fechar { justify-self: end; background: none; border: 0; font: 600 14px var(--font); color: var(--cinza); cursor: pointer; padding: 4px; }
+
+footer { background: #170540; color: var(--lilas-2); font-size: 13px; }
+footer .wrap { padding-block: 34px; display: grid; gap: 12px; }
+footer h3 { font-size: 14px; color: var(--branco); letter-spacing: 0; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .cta { grid-template-columns: minmax(0, 1fr); }
+  .foto { width: min(100%, 240px); justify-self: start; }
+  .cta { padding: 28px 20px; }
+  .secao { padding-block: 56px; }
+}
+@media (max-width: 640px) {
+  .aula { grid-template-columns: 34px minmax(0, 1fr); gap: 8px 12px; padding: 14px; }
+  .aula .num { grid-row: span 3; align-self: start; padding-top: 4px; }
+  .aula .data { justify-self: start; }
+  .aula .acao { justify-content: flex-start; }
+  .hero .acoes .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="/">
+      <span class="marca-selo" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22095C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+      Prof. Rodrigo Francelino
+    </a>
+    <a class="btn btn-amarelo btn-login" href="https://app.nutror.com" target="_blank" rel="noopener">Área do aluno</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="ao-vivo"><i aria-hidden="true"></i>AO VIVO · 19H</span>
+      <h1>Maratona <em>SEEDF</em></h1>
+      <p class="sub">12 aulas até a Meta 1</p>
+      <p class="quando">Segundas, quartas e quintas, ao vivo no YouTube do professor.</p>
+      <div class="acoes">
+        <a class="btn btn-amarelo" href="#aulas">Baixar o material das aulas</a>
+        <a class="btn btn-contorno" href="#programa">Assistir às gravações</a>
+      </div>
+    </div>
+    <figure class="foto" style="margin:0">
+      <img src="/seedf/professor-francelino.jpg" alt="Prof. Rodrigo Francelino sorrindo, de braços cruzados, em uma sala de aula" width="620" height="645">
+    </figure>
+  </div>
+</section>
+
+<div class="aviso">
+  <div class="wrap">
+    <span>Material de cada aula grátis aqui na página</span>
+    <span>Gravações exclusivas para alunos do Programa de Metas</span>
+  </div>
+</div>
+
+<section class="secao secao-lilas" id="aulas">
+  <div class="wrap">
+    <p class="eyebrow">Cronograma da Maratona</p>
+    <h2>As 12 aulas e seus materiais</h2>
+    <p class="intro">O material de cada aula fica disponível aqui assim que a aula acontece. Para baixar, é só fazer um cadastro rápido uma única vez.</p>
+    <ol class="aulas" id="lista-aulas"></ol>
+  </div>
+</section>
+
+<section class="secao" id="programa">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <p class="eyebrow">Perdeu alguma aula?</p>
+        <h2>As gravações ficam só para os alunos do Programa de Metas</h2>
+        <ul>
+          <li>Todas as aulas da Maratona gravadas na plataforma</li>
+          <li>Metas com questões comentadas a partir de 08/12</li>
+          <li>Acesso até a data da prova</li>
+          <li>50% de desconto nos outros produtos do professor</li>
+          <li>Mais de 250 alunos já estudando com o programa</li>
+        </ul>
+      </div>
+      <div class="preco">
+        <span class="de">Programa de Metas SEEDF</span>
+        <strong>R$ 97</strong>
+        <span class="ate">até 30/11 ou até a publicação do edital</span>
+        <a class="btn btn-amarelo" href="https://chk.eduzz.com/40QR2PJJ9B?a=38704104" target="_blank" rel="noopener">Garantir minha vaga</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3 id="privacidade">Política de privacidade</h3>
+    <p>Os dados informados no cadastro (nome, WhatsApp e e-mail) são usados exclusivamente para enviar os materiais e comunicações sobre o Programa de Metas e outros materiais do Prof. Rodrigo Francelino. Os dados não são vendidos nem compartilhados com terceiros. Você pode pedir a exclusão dos seus dados a qualquer momento pelo e-mail contato@programademetas.com.br, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+    <p>© 2026 Prof. Rodrigo Francelino. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<dialog id="modal" aria-labelledby="modal-titulo">
+  <div class="modal">
+    <button class="fechar" type="button" id="fechar">Fechar ✕</button>
+    <div id="modal-form">
+      <h2 id="modal-titulo">Baixe o material da aula</h2>
+      <p class="apoio">Cadastro rápido, feito uma única vez. Depois é só baixar o material de todas as aulas.</p>
+      <form id="form-lead" novalidate style="margin-top:16px">
+        <label for="nome">Seu nome
+          <input type="text" id="nome" autocomplete="name" placeholder="Como você quer ser chamado" required>
+        </label>
+        <label for="whatsapp">WhatsApp com DDD
+          <input type="tel" id="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(61) 90000-0000" required>
+        </label>
+        <label for="email">Seu melhor e-mail
+          <input type="email" id="email" autocomplete="email" placeholder="voce@email.com" required>
+        </label>
+        <label class="consent" for="consentimento">
+          <input type="checkbox" id="consentimento" required>
+          <span>Aceito receber os materiais e outras comunicações do Prof. Rodrigo Francelino por e-mail e WhatsApp, conforme a <a href="#privacidade">política de privacidade</a>.</span>
+        </label>
+        <p class="erro" id="erro" role="alert" hidden></p>
+        <button class="btn btn-amarelo" type="submit" id="enviar">Liberar o material</button>
+      </form>
+    </div>
+    <div id="modal-ok" hidden>
+      <h2 id="ok-titulo">Material liberado!</h2>
+      <p class="apoio" style="margin-top:8px">O download começou. Se não abrir, use o botão abaixo. Os materiais das próximas aulas já ficam liberados para você.</p>
+      <a class="btn btn-amarelo" id="ok-link" href="#" target="_blank" rel="noopener" style="margin-top:16px">Baixar o material</a>
+      <a class="btn btn-roxo" href="https://chk.eduzz.com/40QR2PJJ9B?a=38704104" target="_blank" rel="noopener" style="margin-top:10px">Quero as gravações: fazer parte do Programa de Metas</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+// URL do Google Apps Script que grava os cadastros na planilha "Leads Programa de Metas".
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbyKwInHuHjVgyLiNNXdWt0JHvTwyjedyXyjyUOLcj2nTXrRFjAqoJGHogD3mNXhU6c9Tw/exec";
+
+// Para liberar o material de uma aula: coloque o PDF nesta pasta e preencha "arquivo" com o nome do arquivo.
+const AULAS = [
+  { n: 1,  data: "2026-11-18", tema: "LODF 1: fundamentos e organização do DF", arquivo: "" },
+  { n: 2,  data: "2026-11-19", tema: "LODF 2: competências, Adm. Pública e servidores", arquivo: "" },
+  { n: 3,  data: "2026-11-23", tema: "LC 840/2011: provimento, posse e estágio probatório", arquivo: "" },
+  { n: 4,  data: "2026-11-25", tema: "LC 840/2011: direitos, deveres e regime disciplinar", arquivo: "" },
+  { n: 5,  data: "2026-11-26", tema: "Realidade do DF e RIDE", arquivo: "" },
+  { n: 6,  data: "2026-11-30", tema: "Políticas para as Mulheres e Maria da Penha", arquivo: "" },
+  { n: 7,  data: "2026-12-02", tema: "LODF 3: a educação na Lei Orgânica e revisão", arquivo: "" },
+  { n: 8,  data: "2026-12-03", tema: "Aulão de questões Quadrix", arquivo: "" },
+  { n: 9,  data: "2026-12-07", tema: "Véspera da Meta 1", arquivo: "" },
+  { n: 10, data: "2026-12-09", tema: "Meta 1 resolvida ao vivo", arquivo: "" },
+  { n: 11, data: "2026-12-10", tema: "Aulão final de questões", arquivo: "" },
+  { n: 12, data: "2026-12-14", tema: "Encerramento da Maratona", arquivo: "" },
+];
+
+(function () {
+  const DIAS = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SÁB"];
+  const hojeISO = new Date().toLocaleDateString("sv-SE", { timeZone: "America/Sao_Paulo" });
+  const lista = document.getElementById("lista-aulas");
+  const modal = document.getElementById("modal");
+  let aulaAtual = null;
+
+  function lerCadastro() { try { return localStorage.getItem("pm_maratona_lead") === "1"; } catch (e) { return false; } }
+  function gravarCadastro() { try { localStorage.setItem("pm_maratona_lead", "1"); } catch (e) {} }
+
+  AULAS.forEach(a => {
+    const [y, m, d] = a.data.split("-").map(Number);
+    const dia = DIAS[new Date(y, m - 1, d).getDay()];
+    const li = document.createElement("li");
+    const status = a.data === hojeISO ? "hoje" : (a.data < hojeISO ? "passou" : "futura");
+    li.className = "aula" + (status === "hoje" ? " hoje" : status === "passou" ? " passou" : "");
+    const legenda = status === "hoje" ? "Hoje, às 19h, ao vivo" : status === "passou" ? "Aula já realizada" : "Ao vivo às 19h";
+    li.innerHTML = `<span class="num">${String(a.n).padStart(2, "0")}</span>
+      <span class="data">${dia} ${String(d).padStart(2, "0")}/${String(m).padStart(2, "0")}</span>
+      <span class="tema">${a.tema}<small>${legenda}</small></span>
+      <span class="acao"></span>`;
+    const acao = li.querySelector(".acao");
+    if (a.arquivo) {
+      const b = document.createElement("button");
+      b.className = "btn " + (status === "hoje" ? "btn-roxo" : "btn-amarelo");
+      b.type = "button"; b.textContent = "Baixar material";
+      b.addEventListener("click", () => pedirMaterial(a));
+      acao.appendChild(b);
+    } else {
+      acao.innerHTML = '<span class="tag tag-breve">Material em breve</span>';
+    }
+    lista.appendChild(li);
+  });
+
+  function baixar(a) {
+    const link = document.createElement("a");
+    link.href = a.arquivo; link.download = ""; document.body.appendChild(link); link.click(); link.remove();
+  }
+
+  function pedirMaterial(a) {
+    aulaAtual = a;
+    if (lerCadastro()) { baixar(a); return; }
+    document.getElementById("modal-form").hidden = false;
+    document.getElementById("modal-ok").hidden = true;
+    document.getElementById("modal-titulo").textContent = "Material da Aula " + String(a.n).padStart(2, "0");
+    if (typeof modal.showModal === "function") modal.showModal(); else modal.setAttribute("open", "");
+  }
+  document.getElementById("fechar").addEventListener("click", () => modal.close ? modal.close() : modal.removeAttribute("open"));
+
+  const form = document.getElementById("form-lead");
+  const erro = document.getElementById("erro");
+  const btn = document.getElementById("enviar");
+  const tel = document.getElementById("whatsapp");
+  tel.addEventListener("input", function () {
+    let d = tel.value.replace(/\D/g, "").slice(0, 11);
+    if (d.length > 6) tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2, d.length - 4) + "-" + d.slice(-4);
+    else if (d.length > 2) tel.value = "(" + d.slice(0, 2) + ") " + d.slice(2);
+    else tel.value = d;
+  });
+  function mostrarErro(msg, campo) {
+    erro.textContent = msg; erro.hidden = false;
+    if (campo) { campo.setAttribute("aria-invalid", "true"); campo.focus(); }
+  }
+  form.addEventListener("submit", async function (ev) {
+    ev.preventDefault();
+    erro.hidden = true;
+    form.querySelectorAll("[aria-invalid]").forEach(el => el.removeAttribute("aria-invalid"));
+    const nome = document.getElementById("nome"), email = document.getElementById("email"), cons = document.getElementById("consentimento");
+    const digitos = tel.value.replace(/\D/g, "");
+    if (nome.value.trim().length < 2) return mostrarErro("Digite seu nome.", nome);
+    if (digitos.length < 10) return mostrarErro("Digite seu WhatsApp com DDD, por exemplo (61) 99999-9999.", tel);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) return mostrarErro("Digite um e-mail válido, por exemplo voce@email.com.", email);
+    if (!cons.checked) return mostrarErro("Marque a caixa de autorização para receber o material.", cons);
+    btn.disabled = true; btn.textContent = "Liberando...";
+    const dados = new URLSearchParams({
+      nome: nome.value.trim(), whatsapp: digitos, email: email.value.trim(),
+      origem: "maratona-seedf", pagina: location.origin + location.pathname + "#aula-" + String(aulaAtual.n).padStart(2, "0")
+    });
+    try { await fetch(ENDPOINT, { method: "POST", mode: "no-cors", body: dados }); } catch (e) { /* libera o material mesmo assim */ }
+    gravarCadastro();
+    btn.disabled = false; btn.textContent = "Liberar o material";
+    document.getElementById("ok-titulo").textContent = nome.value.trim().split(" ")[0] + ", material liberado!";
+    document.getElementById("ok-link").href = aulaAtual.arquivo;
+    document.getElementById("modal-form").hidden = true;
+    document.getElementById("modal-ok").hidden = false;
+    baixar(aulaAtual);
+  });
+})();
+</script>
+</body>
+</html>
